@@ -45,7 +45,7 @@ public class GoogleDriveController {
                 return new ResponseEntity<>(response, HttpStatusCode.valueOf(401));
             }
         } catch (Exception e) {
-            log.error(e.getStackTrace());
+            log.error(e.getMessage());
         }
         return new ResponseEntity<>(response, HttpStatusCode.valueOf(504));
     }
